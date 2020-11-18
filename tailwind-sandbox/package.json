@@ -5,6 +5,7 @@
   "main": "postcss.config.js",
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^3.0.0",
+    "@tailwindcss/typography": "^0.2.0",
     "autoprefixer": "^10.0.1",
     "postcss": "^8.1.4",
     "postcss-cli": "^8.1.0",

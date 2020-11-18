@@ -2,3 +2,99 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  height: 100%;
+}
+
+.main-menu-link {
+  @apply text-2xl px-4 pt-3 h-full block;
+}
+
+.main-menu-link.active {
+  @apply font-bold;
+}
+
+.main-menu-link:hover {
+  @apply bg-cst-dark text-cst-light;
+}
+
+
+.footer-menu li:hover {
+   color: theme('colors.cst-light.default');
+}
+
+.card1 {
+  @apply bg-cst-orange p-3 rounded-sm shadow-sm;
+  border: 1px solid theme('colors.cst-dark.default');
+}
+
+.card1-title {
+  @apply mt-5 mb-3 text-xl font-bold;
+}
+
+.card1-icon {
+  @apply mt-2 w-full text-4xl;
+}
+
+.card2 {
+  @apply shadow-md;
+}
+
+.card2-wrapper {
+  @apply p-2 pb-3;
+}
+
+.card2-img {
+  @apply block w-full;
+}
+
+.card2-caption, .card2-desc {
+  margin-top: 0.8rem;
+}
+
+.card2-author {
+  @apply text-sm text-gray-600 italic;
+  margin-top: 0.3rem;
+}
+
+.card2-caption {
+  @apply text-xl font-bold;
+}
+
+@screen sm {
+  .main-menu-link {
+    @apply my-2;
+    border-top: 1px solid theme('colors.cst-light.default');
+  }
+
+  ul.main-menu li:last-child {
+    border-bottom: 1px solid theme('colors.cst-light.default');
+  }
+
+  .card1, .card2 {
+    @apply w-11/12;
+  }
+}
+
+@screen md {
+  .card1, .card2 {
+    @apply w-2/5;
+  }
+
+  .card2:last-child {
+    @apply w-11/12;
+  }
+}
+
+@screen lg {
+  .card1 {
+    @apply w-1/5;
+  }
+  .card2 {
+    @apply w-3/12;
+  }
+
+  .card2:last-child {
+    @apply w-3/12;
+  }
+}

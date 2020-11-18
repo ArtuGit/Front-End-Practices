@@ -4,47 +4,142 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <title>TailWind Sandbox</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="../dist/css/main.css" rel="stylesheet">
 </head>
-<body>
 
-<nav class="flex items-center justify-between flex-wrap bg-gray-800 p-6 fixed w-full z-10 top-0">
-  <div class="flex items-center flex-shrink-0 text-white mr-6">
-    <a class="text-white no-underline hover:text-white hover:no-underline" href="#">
-      <span class="text-2xl pl-2"><i class="em em-grinning"></i> Brand McBrandface</span>
-    </a>
+<body class="bg-cst-light font-nunito h-full leading-normal flex flex-col">
+
+<header
+  class="mx-0 mt-0 mb-10 p-0 bg-cst-dark-lighter w-full flex flex-row flex-nowrap sm:flex-wrap justify-around items-center"
+  id="header">
+  <div class="mobile-header flex flex-row flex-nowrap justify-around items-center sm:flex-grow sm:w-full">
+    <div id="logo"><a class="block font-bold text-cst-light text-3xl px-4 py-2 flex-shrink-0" href="#">Logo</a></div>
+    <div class="hidden sm:block flex-shrink-0 flex-grow-0 py-1" id="hamburger" role="button" tabindex="0">
+      <img alt="" src="../assets/images/icon-hamburger.svg">
+    </div>
   </div>
 
-  <div class="block lg:hidden">
-    <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-white hover:border-white">
-      <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-    </button>
-  </div>
+  <nav class="bg-cst-dark-lighter self-stretch sm:flex-grow-0 sm:w-full sm:hidden" id="nav">
+    <ul
+      class="main-menu h-full text-cst-light-darker flex flex-row sm:flex-col flex-nowrap justify-around items-stretch sm:text-center">
+      <li class=><a class="main-menu-link active" href="#">Home</a></li>
+      <li><a class="main-menu-link" href="#">About</a></li>
+      <li><a class="main-menu-link" href="#">Products</a></li>
+      <li><a class="main-menu-link" href="#">Services</a></li>
+      <li><a class="main-menu-link" href="#">Contact</a></li>
+    </ul>
+  </nav>
 
-  <div class="xs:bg-blue-200 w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-10 pt-6 lg:pt-0 lg:mt-0"
-       id="nav-content">
-    <ul class="list-reset lg:flex justify-end flex-1 items-center">
-      <li class="mr-3">
-        <a class="inline-block py-2 px-4 text-white no-underline" href="#">Active</a>
-      </li>
-      <li class="mr-3">
-        <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">link</a>
-      </li>
-      <li class="mr-3">
-        <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">link</a>
-      </li>
-      <li class="mr-3">
-        <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">link</a>
-      </li>
+  <div class="search-container hidden lg:inline-block">
+    <form>
+      <input class="px-2 bg-cst-light" name="search" placeholder="Search..." type="text">
+      <button type="submit" onclick="dummyHandler();" ><i class="fa fa-search text-cst-light text-xl"></i></button>
+    </form>
+  </div>
+</header>
+
+<main class="lg:container lg:mx-auto flex-grow flex-shrink-0">
+
+  <section class="intro prose sm:px-4">
+    <h2>Lorem ipsum dolor sit amet</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, excepturi, fuga. Hic, officia, possimus?
+      Atque possimus, quae! Nostrum!
+    </p>
+  </section>
+
+  <section class="mt-10 text-center flex flex-row flex-wrap justify-around items-stretch gap-6">
+    <div class="card1">
+      <i class="card1-icon fa fa-address-card"></i>
+      <div class="card1-title">Lorem ipsum</div>
+      <div class="card1-desc">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores debitis facere fugiat laboriosam neque
+        nobis totam? Minus, sint.
+      </div>
+    </div>
+    <div class="card1">
+      <i class="card1-icon fa fa-american-sign-language-interpreting"></i>
+      <div class="card1-title">Lorem ipsum</div>
+      <div class="card1-desc">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet inventore laboriosam quas!
+      </div>
+    </div>
+    <div class="card1">
+      <i class="card1-icon fa fa-anchor"></i>
+      <div class="card1-title">Lorem ipsum</div>
+      <div class="card1-desc">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi asperiores, assumenda necessitatibus
+        placeat repellendus repudiandae?
+      </div>
+    </div>
+    <div class="card1">
+      <i class="card1-icon fa fa-fire-extinguisher"></i>
+      <div class="card1-title">Lorem ipsum</div>
+      <div class="card1-desc">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi excepturi neque sunt tempore.
+      </div>
+    </div>
+  </section>
+
+  <div class="prose mt-10 sm:px-4">
+    <h2>Lorem Ipsum</h2>
+  </div>
+  <section class="mt-10 flex flex-row flex-wrap justify-around items-stretch gap-6">
+    <div class="card2">
+      <img alt="" class="card2-img" src="https://dummyimage.com/900x660/">
+      <div class="card2-wrapper">
+        <div class="card2-author">by Roberto Dinah</div>
+        <div class="card2-caption">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+        <div class="card2-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam, autem dolor enim
+          est eveniet harum neque odit perspiciatis quasi.
+        </div>
+      </div>
+    </div>
+    <div class="card2">
+      <img alt="" class="card2-img" src="https://dummyimage.com/900x660/">
+      <div class="card2-wrapper">
+        <div class="card2-author">by Cristian Loreh</div>
+        <div class="card2-caption">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+        <div class="card2-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur cupiditate dolorum earum ex libero rerum tempore temporibus?
+        </div>
+      </div>
+    </div>
+    <div class="card2">
+      <img alt="" class="card2-img" src="https://dummyimage.com/900x660/">
+      <div class="card2-wrapper">
+        <div class="card2-author">by Jill Peters</div>
+        <div class="card2-caption">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+        <div class="card2-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dolores iste, labore minima sequi vel voluptas!
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer
+  class="mt-10 bg-cst-dark-lighter text-cst-light-darker p-4 gap-6 flex-shrink-0 flex flex-row flex-wrap justify-around items-center"
+  id="footer">
+  <div class="item-footer">
+    <ul class="footer-menu leading-relaxed">
+      <li><a href="#">Menu Item 1</a></li>
+      <li><a href="#">Menu Item 2</a></li>
+      <li><a href="#">Menu Item 3</a></li>
+      <li><a href="#">Menu Item 4</a></li>
     </ul>
   </div>
-</nav>
-
-<!--Container-->
-<div class="container shadow-lg mx-auto bg-white mt-24 md:mt-18">
-
-</div>
-
+  <div class="item-footer">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi? Lorem ipsum dolor.</p>
+  </div>
+  <div class="item-footer">
+    <span> &copy; Copyright </span>
+    <script>
+      document.write(new Date().getFullYear());
+    </script>
+    <span>. All rights reserved.</span>
+  </div>
+</footer>
 <script src="js/main.js"></script>
 </body>
 </html>
